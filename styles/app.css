@@ -1,0 +1,30 @@
+/* Defaults */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "poppinse regular", sans-serif;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Start App.css */
+
+
+
