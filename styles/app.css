@@ -1,3 +1,19 @@
+/* Variables */
+:root {
+  --primary-color: #c90000;
+  --primary-light-color: #ffeae6;
+  --secondary-color: #ffc300;
+  --secondary-light-color: #fffde6;
+  --white-color : #fff;
+
+  --text-color: #504f4f;
+  --title-color: #323232;
+
+  --gray-color-1: #7d7c7c;
+  --gray-color-2: #f1f1f1;
+  --border-color: #e3e3e3;
+}
+
 /* Defaults */
 html {
   font-size: 62.5%; /* 1rem = 10px */
@@ -8,6 +24,7 @@ body {
   font-size: 1.6rem;
   font-family: "poppinse regular", sans-serif;
   line-height: 1.6;
+  color: var(--text-color);
 }
 
 *,
@@ -16,15 +33,165 @@ body {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+svg{
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 .container {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
 }
 
 /* Start App.css */
 
+.header {
+}
+
+.container {
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 3rem 0; */
+}
+
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+
+.logo {
+  width: 5.4rem;
+  height: 5.4rem;
+
+}
+
+.logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.menu__item {
+}
+
+.menu__link {
+  font-family: "poppinse medium";
+  color: var(--gray-color-1);
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+}
+
+.menu__link:hover,
+.menu__link:active {
+  color: var(--primary-color);
+}
+
+.menu__link--active {
+  color: var(--primary-color);
+  font-family: "poppinse semibold";
+  position: relative;
+}
+
+.menu__link--active::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--secondary-color);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0.4rem auto 0 auto;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8.5rem;
+  height: 3.9rem;
+  border: 1px solid transparent;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+}
+
+.nav__link--outline {
+  background-color: var(--white-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
 
 
+.nav__link--outline:hover {
+  border-color: var(--primary-color);
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.nav__link--fill {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.burger{
+  display: none;
+  cursor: pointer;  
+}
+
+
+
+.burger__icon{
+  width: 3.5rem;
+  height: 3.5rem;
+}

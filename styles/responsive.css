@@ -1,20 +1,48 @@
 /* Responsive */
 
-@media screen and(max-width : 992px ) {
+@media screen and (max-width : 992px ) {
   .container {
     max-width: 960px;
   }
+
+  .menu{
+    display: none;
+  }
+
+  .burger{
+    display: block;
+  }
+
+  /* Hero Section */
+  .hero__title{
+    font-size: 3.2rem;
+  }
+
+  .hero__caption{
+    font-size: 1.5rem;
+  }
 }
 
-@media screen and(max-width : 768px ) {
+@media screen and (max-width : 768px ) {
   .container {
     max-width: 720px;
   }
 }
 
 /*  */
-@media screen and(max-width : 576px ) {
+@media screen and (max-width : 576px ) {
   .container {
     max-width: 100%;
+  }
+
+  .hero__wrapper{
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width:400px){
+  .nav__links{
+    display: none;
   }
 }
