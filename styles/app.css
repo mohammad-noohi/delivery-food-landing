@@ -10,7 +10,7 @@
   --text-color: #504f4f;
   --title-color: #323232;
 
-  --gray-color-1: #7D7C7C;
+  --gray-color-1: #7d7c7c;
   --gray-color-2: #f1f1f1;
   --border-color: #e3e3e3;
 }
@@ -59,8 +59,8 @@ svg {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
+  /* border-left: 1px solid red; */
+  /* border-right: 1px solid red; */
 }
 
 /* Helper Classes */
@@ -600,7 +600,7 @@ svg {
 
 .offers {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 3rem;
   margin-top: 3.2rem;
 }
@@ -616,24 +616,22 @@ svg {
   overflow: hidden;
 }
 
-.offer--active{
+.offer--active {
   background-color: var(--primary-color);
   transform: scale(1.05);
 }
 
-.offer--active .offer__category{
+.offer--active .offer__category {
   color: var(--primary-light-color);
 }
 
 .offer--active .offer__title,
-.offer--active .offer__new-price{
+.offer--active .offer__new-price {
   color: var(--secondary-color);
 }
 
-
-
 .offer--active .offer__old-price,
-.offer--active .offer__desc{
+.offer--active .offer__desc {
   color: var(--gray-color-2);
 }
 
@@ -655,8 +653,7 @@ svg {
   white-space: nowrap;
 }
 
-
-.offer__category::after{
+.offer__category::after {
   content: "";
   display: block;
   width: 100%;
@@ -672,7 +669,6 @@ svg {
   white-space: nowrap;
   max-width: 27rem;
 }
-
 
 .offer__desc {
   margin-bottom: 1.2rem;
