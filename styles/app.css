@@ -10,7 +10,7 @@
   --text-color: #504f4f;
   --title-color: #323232;
 
-  --gray-color-1: #7d7c7c;
+  --gray-color-1: #7D7C7C;
   --gray-color-2: #f1f1f1;
   --border-color: #e3e3e3;
 }
@@ -587,4 +587,124 @@ svg {
 
 .menu-section__link:hover {
   text-decoration: none;
+}
+
+/* Discount Section */
+.discount-section {
+  margin: 4rem 0;
+}
+
+.discount-section__title {
+  text-align: center;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+  gap: 3rem;
+  margin-top: 3.2rem;
+}
+
+.offer {
+  border: 1px solid var(--border-color);
+  background-color: var(--gray-color-2);
+  padding: 4rem 0 4rem 3.2rem;
+  border-radius: 2rem;
+  /* width: 370px; */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.offer--active{
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.offer--active .offer__category{
+  color: var(--primary-light-color);
+}
+
+.offer--active .offer__title,
+.offer--active .offer__new-price{
+  color: var(--secondary-color);
+}
+
+
+
+.offer--active .offer__old-price,
+.offer--active .offer__desc{
+  color: var(--gray-color-2);
+}
+
+.offer--active .offer__btn {
+  background-color: var(--secondary-light-color);
+  color: var(--title-color);
+}
+
+.offer__body {
+  width: 50%;
+}
+
+.offer__category {
+  color: var(--title-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 1000%;
+  white-space: nowrap;
+}
+
+
+.offer__category::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-color);
+}
+
+.offer__title {
+  font-family: "poppinse semibold";
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  white-space: nowrap;
+  max-width: 27rem;
+}
+
+
+.offer__desc {
+  margin-bottom: 1.2rem;
+}
+
+.offer__old-price {
+  font-family: "poppinse semibold";
+}
+
+.offer__new-price {
+  font-family: "poppinse semibold";
+  font-size: 2.4rem;
+  color: var(--primary-color);
+}
+
+.offer__btn {
+  background-color: var(--text-color);
+  color: var(--gray-color-2);
+  font-family: "poppinse medium";
+  text-transform: capitalize;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border-radius: 10rem;
+  margin-top: 4rem;
+  white-space: nowrap;
+}
+
+.offer__banner {
+}
+
+.offer__img {
 }
