@@ -19,6 +19,7 @@
 html {
   font-size: 62.5%; /* 1rem = 10px */
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -732,13 +733,13 @@ svg {
 }
 .app__small-title {
   font-size: 2rem;
-  font-family: 'poppinse medium';
+  font-family: "poppinse medium";
   color: var(--gray-color-1);
 }
 
 .app__title {
   font-size: 4.8rem;
-  font-family: 'poppinse medium';
+  font-family: "poppinse medium";
   color: var(--primary-color);
 }
 
@@ -768,11 +769,90 @@ svg {
 .app__link-content {
 }
 
-.app__link-content p:nth-child(1){
-  font-family: 'poppinse light';
+.app__link-content p:nth-child(1) {
+  font-family: "poppinse light";
   font-size: 1.4rem;
 }
 
-.app__link-content p:nth-child(2){
-  font-family: 'poppinse medium';
+.app__link-content p:nth-child(2) {
+  font-family: "poppinse medium";
+}
+
+/* Map Section */
+
+.map-section {
+  margin: 5rem 0;
+}
+
+.map__container {
+  background-color: var(--title-color);
+  border-radius: 2rem;
+  min-height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  /* first linear gradient */
+  background-image: linear-gradient(#504f4fb0, #504f4f85), url('../images/burger_with_fried_chicken.png'), url('../images/salad.png');
+
+  /* second linear gradient */
+  /* background-image: linear-gradient(rgba(201, 0, 0, 0.08), rgba(255, 195, 0, 0.08)), url("../images/burger_with_fried_chicken.png"), url("../images/salad.png"); */
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, -53px -30px, 57px 270px;
+}
+
+.map__title {
+  font-family: "poppinse medium";
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  color: var(--secondary-light-color);
+}
+
+.map__caption {
+  color: var(--gray-color-2);
+  margin-bottom: 2rem;
+}
+
+.map__form {
+}
+
+.input-group {
+  background-color: var(--secondary-color);
+  border-radius: 5rem;
+  padding: 1rem;
+  max-width: 53rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.map__location-input {
+  width: 100%;
+  align-self: stretch;
+  margin-left: 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--title-color);
+  font-size: 1.8rem;
+}
+
+.map__location-input {
+}
+
+.map__location-input::placeholder {
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-size: 1.6rem;
+}
+
+.map__submit-btn {
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  background-color: var(--secondary-light-color);
+  color: var(--title-color);
+  flex-shrink: 0;
 }
