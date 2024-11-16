@@ -704,3 +704,75 @@ svg {
 
 .offer__img {
 }
+
+/* App Section */
+
+.app-section {
+  background-color: var(--gray-color-2);
+  border: 1px solid var(--border-color);
+  width: 93%;
+  display: flex;
+  border-radius: 0 100rem 100rem 0;
+  margin: 15rem 0;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 6rem;
+}
+
+.app__banner {
+  margin: -2rem 0;
+  transform: scale(1.15);
+}
+
+.app__img {
+}
+
+.app__content {
+  padding: 6rem 3rem 6rem 3rem;
+}
+.app__small-title {
+  font-size: 2rem;
+  font-family: 'poppinse medium';
+  color: var(--gray-color-1);
+}
+
+.app__title {
+  font-size: 4.8rem;
+  font-family: 'poppinse medium';
+  color: var(--primary-color);
+}
+
+.app__description {
+  margin: 1.2rem 0 3.2rem 0;
+}
+
+.app__links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.app__link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--gray-color-1);
+  color: var(--white-color);
+  padding: 0.8rem 2rem;
+  border-radius: 5rem;
+}
+
+.app__link-icon {
+}
+
+.app__link-content {
+}
+
+.app__link-content p:nth-child(1){
+  font-family: 'poppinse light';
+  font-size: 1.4rem;
+}
+
+.app__link-content p:nth-child(2){
+  font-family: 'poppinse medium';
+}
