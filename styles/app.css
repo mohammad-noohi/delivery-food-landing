@@ -611,7 +611,6 @@ svg {
   background-color: var(--gray-color-2);
   padding: 4rem 0 4rem 3.2rem;
   border-radius: 2rem;
-  /* width: 370px; */
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -795,7 +794,7 @@ svg {
   padding: 2rem;
   position: relative;
   /* first linear gradient */
-  background-image: linear-gradient(#504f4fb0, #504f4f85), url('../images/burger_with_fried_chicken.png'), url('../images/salad.png');
+  background-image: linear-gradient(#504f4fb0, #504f4f85), url("../images/burger_with_fried_chicken.png"), url("../images/salad.png");
 
   /* second linear gradient */
   /* background-image: linear-gradient(rgba(201, 0, 0, 0.08), rgba(255, 195, 0, 0.08)), url("../images/burger_with_fried_chicken.png"), url("../images/salad.png"); */
@@ -855,4 +854,100 @@ svg {
   background-color: var(--secondary-light-color);
   color: var(--title-color);
   flex-shrink: 0;
+}
+
+/*------------------------------- Footer -------------------------------*/
+
+.footer {
+  background-color: var(--secondary-light-color);
+  padding: 3.5rem 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 3rem;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo--footer {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+}
+
+.logo--footer img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__brand-name {
+  font-family: "poppinse semibold";
+  font-size: 3.2rem;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.footer__social-link {
+  color: var(--text-color);
+}
+
+.footer__right {
+  display: flex;
+  gap: 7rem;
+}
+
+.footer__title {
+  font-family: "poppinse medium";
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__menu-item {
+}
+
+.footer__menu-link {
+  text-transform: uppercase;
+  font-family: "poppinse light";
+}
+
+.footer__menu-link:hover {
+  text-decoration: underline;
+}
+
+.footer__title {
+}
+
+.footer__opening-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__opening-hours li {
+  font-family: "poppinse light";
 }

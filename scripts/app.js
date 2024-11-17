@@ -22,7 +22,7 @@ const move = (e) => {
   menuFilterList.scrollLeft = scrollLeft - scroll;
 }
 
-// Add the event listeners
+/*  Add the event listeners */
 menuFilterList.addEventListener('mousemove', move, false);
 menuFilterList.addEventListener('mousedown', startDragging, false);
 menuFilterList.addEventListener('mouseup', stopDragging, false);
