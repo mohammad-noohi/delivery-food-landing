@@ -1,19 +1,20 @@
 "use strict";
 
-// * Elements and Golobal Varibles
+/* -------------------------- Elements and Golobal Varibles ------------------------------*/
 const html = document.documentElement;
+const body = document.body;
 const header = document.querySelector(".header");
-const headerMenu = document.querySelector(".menu");
-const menuSection = document.querySelector(".menu-section");
-const discountSection = document.querySelector(".discount-section");
-
-// filter items variables
+const navigationLinks = document.querySelectorAll(".navigation-link");
+const burgerIcon = document.querySelector(".burger");
+const mobileOffcanvas = document.querySelector(".mobile-offcanvas");
+const overlay = document.querySelector(".overlay");
 const menuFilterList = document.querySelector(".menu__filter-list");
 let mouseDown = false;
 let startX, scrollLeft;
-
-// scroll event variables
 let lastScrollPos = 0;
+
+let offcanvasIsActive = false;
+let offcanvasIsOpen;
 
 const startDragging = e => {
   mouseDown = true;
@@ -43,19 +44,23 @@ menuFilterList.addEventListener("mouseleave", stopDragging, false);
 
 /* scroll to relate section when click on menu links */
 
-headerMenu.addEventListener("click", e => {
-  const menuLink = e.target.closest(".menu__link");
-  const targetSection = document.querySelector(`#${menuLink.dataset.target}`);
+// headerMenu.addEventListener("click", e => {});
 
-  if (targetSection) {
-    e.preventDefault();
-    targetSection.scrollIntoView({
-      behavior: "smooth",
-    });
+navigationLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    const menuLink = e.target.closest(".navigation-link");
+    const targetSection = document.querySelector(`#${menuLink.dataset.target}`);
 
-    // Hide header
-    header.classList.remove('header--hide')
-  }
+    if (targetSection) {
+      e.preventDefault();
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      // Hide header
+      header.classList.remove("header--hide");
+    }
+  });
 });
 
 /* ====================== Detect Scroll Direction =============================== */
@@ -77,4 +82,25 @@ document.addEventListener("scroll", e => {
   if (html.scrollTop == 0) {
     header.classList.remove("header--scrolled");
   }
+});
+
+/* Mobile Offcanvase */
+burgerIcon.addEventListener("click", e => {
+  if (offcanvasIsActive) return;
+
+  // open it
+  mobileOffcanvas.classList.add("mobile-offcanvas--show");
+  overlay.classList.add("overlay--ative");
+  html.classList.add('disable-scrolling')
+
+  offcanvasIsActive = true;
+});
+
+overlay.addEventListener("click", e => {
+  // close it
+  mobileOffcanvas.classList.remove("mobile-offcanvas--show");
+  overlay.classList.remove("overlay--ative");
+  html.classList.remove('disable-scrolling')
+
+  offcanvasIsActive = false;
 });

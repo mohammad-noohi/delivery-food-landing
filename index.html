@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body id="hompage">
-
     <!--* Icons Pack -->
     <svg display="none">
       <!-- Burger Menu -->
@@ -148,13 +147,13 @@
             <a href="#" class="logo"><img class="logo__img" src="images/logo.jpg" alt="" /></a>
             <ul class="menu">
               <li class="menu__item">
-                <a href="" class="menu__link menu__link--active" data-target="hompage">Homepage</a>
+                <a href="" class="menu__link menu__link--active navigation-link" data-target="hompage">Homepage</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link" data-target="menu-section">Menu</a>
+                <a href="" class="menu__link navigation-link" data-target="menu-section">Menu</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link" data-target="discount-section">Sale off</a>
+                <a href="" class="menu__link navigation-link" data-target="discount-section">Sale off</a>
               </li>
               <li class="menu__item">
                 <a href="" class="menu__link">News</a>
@@ -179,6 +178,8 @@
           </div>
         </nav>
       </div>
+
+      
     </header>
 
     <!--* Main -->
@@ -641,6 +642,30 @@
       </div>
     </footer>
 
+    <!--* Mobile offcanvas -->
+    <div class="mobile-offcanvas">
+      <ul class="mobile__menu">
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link navigation-link mobile__menu-link--active" data-target="homepage">Homepage</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link navigation-link" data-target="menu-section">Menu</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link navigation-link" data-target="discount-section">Sale off</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link">News</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- * Overlay -->
+     <div class="overlay"></div>
     <!-- app.js -->
     <script src="scripts/app.js"></script>
   </body>

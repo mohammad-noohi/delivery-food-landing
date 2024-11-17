@@ -22,6 +22,10 @@ html {
   overflow-x: hidden;
 }
 
+.disable-scrolling{
+  overflow-y: hidden;
+}
+
 body {
   font-size: 1.6rem;
   font-family: "poppinse regular", sans-serif;
@@ -91,39 +95,20 @@ svg {
   z-index: -1;
 }
 
-/** Start App.css */
+/**------------------------------------ Header ------------------------------------**/
 
-/* .header.header--scrolled{
-  position: fixed;
-    top: 0;
-    z-index: 30;
-    width: 100%;
-}
-
-.header.header--scrolled .nav{
-  background: rgba(190, 190, 190, 0.687);
-    padding: 3rem;
-    border-radius: 5rem;
-    backdrop-filter: blur(4px);
-} */
-
-/* Redesign Header */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 2rem 0;
   transition: all 300ms linear;
-
-  z-index: 30;
+  z-index: 9;
 }
 
 .header.header--scrolled {
-  /* background-color: rgba(220, 220, 220, 0.655); */
-  /* background-color: rgba(255, 253, 230, 0.792); */
   background-color: rgb(255, 234, 230, 0.6);
   backdrop-filter: blur(10px);
-  /* border-bottom: 1px solid var(--gray-color-1); */
 }
 
 .header.header--scrolled .menu__link:not(.menu__link.menu__link--active) {
@@ -140,7 +125,6 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 3rem 0; */
 }
 
 .nav__left {
@@ -258,7 +242,47 @@ svg {
   height: 3.5rem;
 }
 
-/*------------------------------------- Main -------------------------------------*/
+/* Mobile Offcanvas */
+.mobile-offcanvas {
+  background-color: #ffc300;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 28rem;
+  left: -28rem;
+  padding: 3rem;
+  transition: all 200ms;
+  z-index: 11;
+}
+
+.mobile-offcanvas.mobile-offcanvas--show {
+  left: 0;
+}
+
+.mobile__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.mobile__menu {
+}
+
+.mobile__menu-link {
+  transition: all 200ms;
+  font-family: "poppinse medium";
+}
+
+.mobile__menu-link.mobile__menu-link--active {
+  color: var(--primary-color);
+}
+
+.mobile__menu-link:hover {
+  color: var(--primary-color);
+}
+
+/**------------------------------------- Main -------------------------------------**/
 
 /* Hero Section */
 
@@ -269,7 +293,6 @@ svg {
 .hero__container {
   display: flex;
   align-items: center;
-  /* gap: 8.8rem; */
 }
 
 .hero__content {
@@ -395,7 +418,6 @@ svg {
   gap: 2rem;
   overflow-x: auto;
   user-select: none;
-  /* cursor: grab; */
 }
 
 .menu__filter-list::-webkit-scrollbar {
@@ -414,7 +436,6 @@ svg {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--border-color);
-  /*don'tshrink*/
   flex-shrink: 0;
   user-select: auto;
   cursor: pointer;
@@ -867,7 +888,7 @@ svg {
   flex-shrink: 0;
 }
 
-/*------------------------------- Footer -------------------------------*/
+/**------------------------------- Footer -------------------------------**/
 
 .footer {
   background-color: var(--secondary-light-color);
@@ -955,4 +976,21 @@ svg {
 
 .footer__opening-hours li {
   font-family: "poppinse light";
+}
+
+/** Overlay **/
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+
+
+.overlay.overlay--ative{
+  display: block;
 }
