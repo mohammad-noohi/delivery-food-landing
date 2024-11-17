@@ -43,9 +43,6 @@ menuFilterList.addEventListener("mouseup", stopDragging, false);
 menuFilterList.addEventListener("mouseleave", stopDragging, false);
 
 /* scroll to relate section when click on menu links */
-
-// headerMenu.addEventListener("click", e => {});
-
 navigationLinks.forEach(link => {
   link.addEventListener("click", e => {
     const menuLink = e.target.closest(".navigation-link");
@@ -78,11 +75,7 @@ document.addEventListener("scroll", e => {
   // update last scroll position
   lastScrollPos = html.scrollTop;
 
-
-  console.log(html.scrollTop);
-
-  if(Math.trunc(html.scrollTop) == 50){
-    console.log('yes');
+  if (Math.trunc(html.scrollTop) == 50) {
   }
   // when use scroll up to the top of the page
   if (Math.trunc(html.scrollTop) == 100 || Math.trunc(html.scrollTop) == 0) {
@@ -90,14 +83,14 @@ document.addEventListener("scroll", e => {
   }
 });
 
-/* Mobile Offcanvase */
+/*=========================== Mobile Offcanvase ===========================*/
 burgerIcon.addEventListener("click", e => {
   if (offcanvasIsActive) return;
 
   // open it
   mobileOffcanvas.classList.add("mobile-offcanvas--show");
   overlay.classList.add("overlay--ative");
-  html.classList.add('disable-scrolling')
+  html.classList.add("disable-scrolling");
 
   offcanvasIsActive = true;
 });
@@ -106,7 +99,7 @@ overlay.addEventListener("click", e => {
   // close it
   mobileOffcanvas.classList.remove("mobile-offcanvas--show");
   overlay.classList.remove("overlay--ative");
-  html.classList.remove('disable-scrolling')
+  html.classList.remove("disable-scrolling");
 
   offcanvasIsActive = false;
 });

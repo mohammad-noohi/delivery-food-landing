@@ -6,10 +6,8 @@
   --secondary-light-color: #fffde6;
   --bg-app: #fffef9;
   --white-color: #fff;
-
   --text-color: #504f4f;
   --title-color: #323232;
-
   --gray-color-1: #7d7c7c;
   --gray-color-2: #f1f1f1;
   --border-color: #e3e3e3;
@@ -22,7 +20,7 @@ html {
   overflow-x: hidden;
 }
 
-.disable-scrolling{
+.disable-scrolling {
   overflow-y: hidden;
 }
 
@@ -264,9 +262,6 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-}
-
-.mobile__menu {
 }
 
 .mobile__menu-link {
@@ -990,7 +985,6 @@ svg {
   z-index: 10;
 }
 
-
-.overlay.overlay--ative{
+.overlay.overlay--ative {
   display: block;
 }
