@@ -78,8 +78,14 @@ document.addEventListener("scroll", e => {
   // update last scroll position
   lastScrollPos = html.scrollTop;
 
+
+  console.log(html.scrollTop);
+
+  if(Math.trunc(html.scrollTop) == 50){
+    console.log('yes');
+  }
   // when use scroll up to the top of the page
-  if (html.scrollTop == 0) {
+  if (Math.trunc(html.scrollTop) == 100 || Math.trunc(html.scrollTop) == 0) {
     header.classList.remove("header--scrolled");
   }
 });
