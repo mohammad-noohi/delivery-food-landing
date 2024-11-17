@@ -117,6 +117,12 @@
   .products {
     grid-template-columns: 1fr;
   }
+
+
+  /* app section */
+  .app__title{
+    font-size: 3.2rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
