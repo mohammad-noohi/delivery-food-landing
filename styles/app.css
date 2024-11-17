@@ -91,12 +91,49 @@ svg {
   z-index: -1;
 }
 
-/* Start App.css */
+/** Start App.css */
 
-.header {
+/* .header.header--scrolled{
+  position: fixed;
+    top: 0;
+    z-index: 30;
+    width: 100%;
 }
 
-.container {
+.header.header--scrolled .nav{
+  background: rgba(190, 190, 190, 0.687);
+    padding: 3rem;
+    border-radius: 5rem;
+    backdrop-filter: blur(4px);
+} */
+
+/* Redesign Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem 0;
+  transition: all 300ms linear;
+
+  z-index: 30;
+}
+
+.header.header--scrolled {
+  /* background-color: rgba(220, 220, 220, 0.655); */
+  /* background-color: rgba(255, 253, 230, 0.792); */
+  background-color: rgb(255, 234, 230, 0.6);
+  backdrop-filter: blur(10px);
+  /* border-bottom: 1px solid var(--gray-color-1); */
+}
+
+.header.header--scrolled .menu__link:not(.menu__link.menu__link--active) {
+  color: var(--title-color);
+}
+
+.header.header--hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .nav {
@@ -127,9 +164,6 @@ svg {
   display: flex;
   align-items: center;
   gap: 4.8rem;
-}
-
-.menu__item {
 }
 
 .menu__link {
@@ -228,7 +262,8 @@ svg {
 
 /* Hero Section */
 
-.hero {
+.main {
+  margin-top: 10rem;
 }
 
 .hero__container {
@@ -512,9 +547,6 @@ svg {
   color: var(--secondary-color);
 }
 
-.product__score-value {
-}
-
 .product__footer {
   display: flex;
   align-items: center;
@@ -699,12 +731,6 @@ svg {
   white-space: nowrap;
 }
 
-.offer__banner {
-}
-
-.offer__img {
-}
-
 /* App Section */
 
 .app-section {
@@ -722,9 +748,6 @@ svg {
 .app__banner {
   margin: -2rem 0;
   transform: scale(1.15);
-}
-
-.app__img {
 }
 
 .app__content {
@@ -760,12 +783,6 @@ svg {
   color: var(--white-color);
   padding: 0.8rem 2rem;
   border-radius: 5rem;
-}
-
-.app__link-icon {
-}
-
-.app__link-content {
 }
 
 .app__link-content p:nth-child(1) {
@@ -814,9 +831,6 @@ svg {
   margin-bottom: 2rem;
 }
 
-.map__form {
-}
-
 .input-group {
   background-color: var(--secondary-color);
   border-radius: 5rem;
@@ -837,9 +851,6 @@ svg {
   background-color: transparent;
   color: var(--title-color);
   font-size: 1.8rem;
-}
-
-.map__location-input {
 }
 
 .map__location-input::placeholder {
@@ -927,9 +938,6 @@ svg {
   gap: 1rem;
 }
 
-.footer__menu-item {
-}
-
 .footer__menu-link {
   text-transform: uppercase;
   font-family: "poppinse light";
@@ -937,9 +945,6 @@ svg {
 
 .footer__menu-link:hover {
   text-decoration: underline;
-}
-
-.footer__title {
 }
 
 .footer__opening-hours {

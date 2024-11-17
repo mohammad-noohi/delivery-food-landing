@@ -13,7 +13,7 @@
     <!-- responsive.css -->
     <link rel="stylesheet" href="styles/responsive.css" />
   </head>
-  <body>
+  <body id="hompage">
 
     <!--* Icons Pack -->
     <svg display="none">
@@ -148,13 +148,13 @@
             <a href="#" class="logo"><img class="logo__img" src="images/logo.jpg" alt="" /></a>
             <ul class="menu">
               <li class="menu__item">
-                <a href="" class="menu__link menu__link--active">Homepage</a>
+                <a href="" class="menu__link menu__link--active" data-target="hompage">Homepage</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Menu</a>
+                <a href="" class="menu__link" data-target="menu-section">Menu</a>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Sale off</a>
+                <a href="" class="menu__link" data-target="discount-section">Sale off</a>
               </li>
               <li class="menu__item">
                 <a href="" class="menu__link">News</a>
@@ -183,7 +183,7 @@
 
     <!--* Main -->
     <main class="main">
-      <!-- Hero Section -->
+      <!--* Hero Section -->
       <seciton class="hero">
         <div class="container">
           <div class="hero__container">
@@ -232,8 +232,8 @@
         </div>
       </seciton>
 
-      <!-- Menu Section -->
-      <section class="menu-section">
+      <!--* Menu Section -->
+      <section class="menu-section" id="menu-section">
         <div class="container">
           <h2 class="menu-section__title"><span class="section-title__text">menu</span></h2>
           <div class="menu__filter-list">
@@ -455,8 +455,8 @@
         </div>
       </section>
 
-      <!-- Discount Section -->
-      <section class="discount-section">
+      <!--* Discount Section -->
+      <section class="discount-section" id="discount-section">
         <div class="container">
           <div class="discount-section__container">
             <h2 class="discount-section__title"><span class="section-title__text">sale off</span></h2>
@@ -535,7 +535,7 @@
         </div>
       </section>
 
-      <!-- App Section -->
+      <!--* App Section -->
       <section class="app-section">
         <div class="app__banner"><img class="app__img" src="./images/mobile-mokup.png" alt="" /></div>
         <div class="app__content">
@@ -566,7 +566,7 @@
         </div>
       </section>
 
-      <!-- Map Section -->
+      <!--* Map Section -->
       <section class="map-section">
         <div class="container">
           <div class="map__container">
